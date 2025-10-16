@@ -14,7 +14,7 @@ class SectionsController extends Controller
      */
     public function index()
     {
-        $sections = sections::all();
+        $sections = sections::all();/**هنا بيجيب كل حاجه موجوده فى table */
         return view('sections.sections',compact('sections'));
     }
 
