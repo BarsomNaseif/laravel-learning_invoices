@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Models\invoices;
 use Illuminate\Container\Attributes\Auth;
 use App\Http\Controllers\InvoicesController;
+use App\Http\Controllers\SectionsController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -23,5 +24,6 @@ Route::middleware('auth')->group(function () {
 //Auth::routes(['register' => false]);
 require __DIR__ . '/auth.php';
 Route::get('/invoices', [InvoicesController::class, 'index']);
+Route::resource('sections', SectionsController::class);
 
 Route::get('/{page}', [AdminController::class, 'index']);

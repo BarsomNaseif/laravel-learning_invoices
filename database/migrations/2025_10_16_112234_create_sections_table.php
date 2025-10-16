@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('sections', function (Blueprint $table) {
             $table->id();
-            $table->string('section-name',999);
+            $table->string('section_name',999);
             $table->text('description')->nullable();
             $table->string('created_by',999);
-            $table->string('updated_by',999);
+     
             $table->timestamps();
         });
     }
