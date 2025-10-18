@@ -93,7 +93,7 @@ class SectionsController extends Controller
     {
         $id = $request->id;
 
-        $request->validate($request, [
+        $request->validate( [
 
             'section_name' => 'required|max:255|unique:sections,section_name,'.$id,
             'description' => 'required',
